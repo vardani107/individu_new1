@@ -25,7 +25,7 @@ use App\http\Controllers\loginController;
 
 //guest
 Route::middleware('guest')->group(function(){
-    Route::get('login', [loginController::class, 'index']);
+    Route::get('login', [loginController::class, 'index'])->name('login');
     Route::post('login', [loginController::class, 'authenticate']);
    
 
